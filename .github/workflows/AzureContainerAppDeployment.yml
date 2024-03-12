@@ -29,8 +29,8 @@ jobs:
     - uses: azure/docker-login@v1
       with:
         login-server: salespocacr.azurecr.io
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username: salespocacr
+        password: 18tpUx09XQh+QVcIYuuc5jAdYJP4PisfGVqE+tC8MK+ACRBKy0h8
     - run: |
         docker build . -t salespocacr.azurecr.io/myapp:${{ github.sha }}
         docker push salespocacr.azurecr.io/myapp:${{ github.sha }}     
